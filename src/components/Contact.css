@@ -1,0 +1,97 @@
+/* Contact.js */
+
+.wrapper-contact {
+    /* padding: 0 20px; */
+    /* color: white; */
+    max-width: 400px;
+    /* display: flex; */
+    margin: 15px auto 30px;
+}
+
+.form {
+/* height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form > h1 {
+    margin-bottom: 30px;
+}
+
+/* .form input {
+    width: 100%;
+} */
+
+.form > input, textarea {
+    border: 2px solid black;
+    background: #fdf9fd;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px #424242;
+}
+
+select {
+    width: 100%;
+    border: 2px solid black;
+    background: #fdf9fd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px #424242;
+    font-size: 16px;
+    color: rgb(0, 0, 32);
+    outline: none;
+}
+
+.select-option {
+    /* font-family: 'Comfortaa', cursive; */
+    text-align: left;
+}
+
+.select-option:focus {
+    /* font-family: 'Comfortaa', cursive; */
+}
+
+.form > input:focus, textarea:focus {
+    border: 2px solid black;
+    border-radius: 8px;
+}
+
+.form > textarea {
+    height: 150px;
+    /* max-width: 400px; */
+    min-height: 100px;
+    margin-bottom: 30px;
+}
+
+.form > .info {
+    color: #888888;
+    font-size: small;
+}
+
+.form > label {
+    padding-bottom: 10px;
+    /* color: #EBECF0; */
+    /* font-weight: lighter; */
+}
+
+.form > button {
+    border: 2px solid black;
+    border-radius: 8px;
+    margin: 15px auto 10px;
+    text-align: center;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 20px;
+    font-weight: 700;
+    box-shadow: 3px 4px;
+    cursor: pointer;
+}
+
+.form > button:hover {
+    box-shadow: 0 0;
+    transition: ease 0.2s;
+}

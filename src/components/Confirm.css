@@ -1,0 +1,58 @@
+.wrapper-confirm {
+    padding: 50px 0 50px;
+}
+
+.splash-confirm {
+    width: 40%;
+    margin: 0 auto 40px;
+    display: block;
+}
+
+.tagline-confirm {
+    text-align: center;
+    line-height: 150%;
+    font-size: 2em;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.text-confirm {
+    margin-top: 15px;
+    text-align: center;
+    line-height: 130%;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #838383;
+}
+
+.social-confirm {
+    display: flex;
+    /* max-width: 60%; */
+    width: 240px;
+    margin: 60px auto;
+    justify-content: space-between;
+    font-size: 1.1em;
+}
+
+.social-confirm-icons {
+    display: flex;
+    /* max-width: 60%; */
+    /* margin: 30px auto; */
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.social-confirm a {
+    color: black;
+}
+
+.email-confirm {
+    color: #838383;
+}
+
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+    .splash-confirm {
+        width: 70%;
+    }
+}

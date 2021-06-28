@@ -1,38 +1,151 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* body {
+  background-color: rgb(248, 246, 253);
+} */
+
+body,
+input,
+textarea,
+button {
+  /* font-family: 'Comfortaa', cursive; */
+  font-family: 'Roboto', sans-serif;
+}
+
+.app {
+  margin: 0 auto;
+  height: 100vh;
+  overflow: visible;
+  max-width: 55%;
+  margin: 0 auto;
+}
+
+.app::-webkit-scrollbar {
+  display: none;
+}
+
+.wrapper {
+  width: 90%;
+  /* display: flex; */
+  margin: 0 auto;
+  /* position: absolute; */
+  /* overflow-y: scroll; */
+}
+
+
+
+.logo-row {
+  /* width: 250px; */
+  margin: 20px auto;
+  /* background-color: wheat; */
+  /* border-radius: 30px; */
+  /* padding: 20px 0 -5px; */
   text-align: center;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  width: 150px;
+  /* border-bottom: 6px solid #1d1d1d; */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.bottom-line {
+  /* margin-top: 10px; */
+  opacity: 0.5;
+  border: 1px solid #afafaf;
+  background: #afafaf;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.bottom-text {
+  text-align: center;
+  padding: 30px;
+  color: #4e4e4e;
+  display: inline-block;
+}
+
+.back {
   color: white;
+  border: 1px solid #ea80fc;
+  padding: 0.3em 0.8em;
+  border-radius: 20px;
+  font-weight: lighter;
 }
 
-.App-link {
-  color: #61dafb;
+.faq {
+  grid-column: 2;
+  text-align: right;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.email {
+  color: black;
+}
+
+.descrip {
+  grid-column: 1;
+}
+
+.back-section {
+  padding: 10px 0;
+  display: inline-block;
+}
+
+/* .back-section-404 {
+  font-weight: 700;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0;
+
+  
+} */
+
+.back-button {
+  line-height: 2.3em;
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: 700;
+  color: #afafaf;
+}
+
+.back-button-404 {
+  line-height: 1.7em;
+  margin: 0 auto;
+  display: inline-block;
+  font-size: 1.5em;
+  font-weight: 700;
+  color: #afafaf;
+  /* cursor:  */
+}
+
+
+
+/* For tablets, portrait and landscape */
+/* custom upper width*/
+@media only screen 
+  and (min-width: 768px) 
+  and (max-width: 1400px) {
+    
+  .app {
+    max-width: 80%;
   }
-  to {
-    transform: rotate(360deg);
+
+}
+
+/* For mobile phones: */
+@media only screen and (max-width: 768px) {
+  
+  .app {
+    max-width: 90%;
   }
 }

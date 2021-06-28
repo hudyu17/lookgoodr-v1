@@ -1,0 +1,57 @@
+.collapsible {
+    text-align: center;
+    align-items: center;
+}
+
+.collapsible .toggle {
+    background:wheat;
+    border: 1px solid #ea80fc;
+    border-radius: 5px;
+    /* padding: 0.6em; */
+    /* margin-top: 0.7em; */
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    line-height: 3em;
+    text-align: left;
+    z-index: 10;
+    position: relative;
+    /* display: inline-block; */
+    /* font-weight: lighter; */
+    font-weight: bold;
+}
+
+.collapsible .toggle-open {
+    background: white;
+    border: 1px solid #ea80fc;
+    border-radius: 5px 5px 0px 0px;
+    /* padding: 0.6em; */
+    margin-top: 0.7em;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    text-align: left;
+    z-index: 10;
+    /* position: relative; */
+    font-weight: bold;
+} 
+
+.collapsible i {
+    float: right;
+}
+
+.collapsible .content {
+    /* width: 68%; */
+    border: 1px solid #ea80fc;
+    border-radius: 0px 0px 5px 5px;
+    margin-top: -1px;
+    z-index: 0;
+    /* padding: 0.6em; */
+    margin-bottom: 0.7em;
+    display: inline-block;
+    line-height: 130%;
+    text-align: left;
+    position: relative;
+    /* color: white; */
+}
+
