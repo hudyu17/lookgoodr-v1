@@ -12,7 +12,7 @@ const Contact = () => {
   const [description, setDescription] = useState("");
   const [type, setType] = useState("");
 
-  const [loader, setLoader] = useState(false);
+  // const [loader, setLoader] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
   // Getting stylist name
@@ -31,17 +31,16 @@ const Contact = () => {
       return;
     }
 
-    // Send 2 emails: 
-    // 1 for client confirmation, 1 for stylist order information
-    // // comment out for testing - don't want to use your quota lol
-    // emailjs.sendForm('gmail', 'client-v1', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
+    // Send 3 emails: 
+    // Email 1: Client confirmation
+    emailjs.sendForm('gmail', 'client-v1', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
 
-    // notify stylists
+    // Email 2: notify stylists
     if (stylist == "Chris") {
       emailjs.sendForm('gmail', 'stylist-chris', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
       .then((result) => {
@@ -72,31 +71,30 @@ const Contact = () => {
       });
     }
 
-    // notify hudson
-    // emailjs.sendForm('gmail', 'notify-hudson', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
-    //   .then((result) => {
-    //       console.log(result.text);
-    //   }, (error) => {
-    //       console.log(error.text);
-    //   });
+    // Email 3: notify hudson
+    emailjs.sendForm('gmail', 'notify-hudson', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
 
-    // add to firebase DB
-    // db.collection("requests")
-    //   .add({
-    //     name: name,
-    //     email: email,
-    //     type: type,
-    //     desc: description
-    //     stylist: stylist
-    //   })
-    //   .then(() => {
-    //     setLoader(false);
-    //     alert("Your message has been submitted👍"); DELETE?
-    //   })
-    //   .catch((error) => {
-    //     alert(error.message);
-    //     setLoader(false);
-    //   });
+    // Add to firebase DB
+    db.collection("requests")
+      .add({
+        name: name,
+        email: email,
+        type: type,
+        desc: description,
+        stylist: stylist
+      })
+      .then(() => {
+        // setLoader(false);
+      })
+      .catch((error) => {
+        alert(error.message);
+        // setLoader(false);
+      });
   
 
     // setName("");
@@ -158,7 +156,7 @@ const Contact = () => {
 
           <label>Request Description*</label>
           <textarea
-            placeholder="Tell us more about what you're looking for e.g. 2 button down shirts"
+            placeholder="Tell us more about what you're looking for e.g. 2 button down shirts from Uniqlo"
             name="description"
             value={description}
             onChange={(e) => setDescription(e.target.value)}
@@ -168,7 +166,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            style={{ background: loader ? "#afafaf" : "#ea80fc" }}
+            style={{ background: "#ea80fc" }}
           >
             Submit request
           </button>

@@ -13,7 +13,7 @@ const Bio = (props) => {
                 <p>{props.description}</p>
               </div>
             </div>
-            <a href={props.moodboard_link} target="blank">
+            <a href={props.moodboard_link} target="_blank">
               <img className="moodboard" src={props.moodboard} />
             </a>
         </div>
