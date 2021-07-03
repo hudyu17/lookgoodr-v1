@@ -113,6 +113,9 @@ function Home() {
             <strong>Have more questions?</strong> Email us <a className="email" href="mailto:lookgoodr.style@gmail.com">here!</a>  
           </div>
         </div>
+        <div className="version">
+          v 1.0
+        </div>
       </div>
     );
   }
