@@ -115,6 +115,26 @@ function Stylist() {
               </Link>
             </div>
           </div>
+
+          {/* <div className="profile">
+            <Bio 
+              name="Test" 
+              style="Streetwear, Curated Vintage" 
+              pic={shelby} 
+              description="University of Toronto, Life Sci"
+              moodboard={shelby_board}
+              moodboard_link="https://www.pinterest.ca/Shelbyliu_/_saved/"
+            />
+            <div className="action-bar">
+              <a href="https://www.instagram.com/shelby_liu/" target="_blank"><i class="fab fa-instagram fa-3x"/></a>
+              <a href="https://www.pinterest.ca/Shelbyliu_/_saved/" target="_blank"><i class="fab fa-pinterest-square fa-3x"/></a>
+              <a href="https://www.depop.com/shelby_liu/?shareButtonLink=true" target="_blank"><i class="fas fa-external-link-square-alt fa-3x"/></a>
+              <Link className="request" style={{ textDecoration: 'none' }}
+                to={{pathname: "/request", state: {stylist: "Test"}}}> 
+                <div className="request-text">Request ➜</div>
+              </Link>
+            </div>
+          </div> */}
       
         </div>
         <hr className="bottom-line"/>

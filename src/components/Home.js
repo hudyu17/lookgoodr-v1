@@ -104,7 +104,7 @@ function Home() {
           </div>
           <div className="faq-grid-block">
             <h3>Who are you and what is this project?</h3>
-            Read more about lookgoodr <a className="email" target="blank" href="https://www.notion.so/About-lookgoodr-cef509c12d1f48a3ae37502180088575">here</a>, and follow our <a className="email" href="https://www.instagram.com/lookgoodr.style/" target="blank"><i class="fab fa-instagram fa-lg"/></a> to stay updated on our journey!
+            Read more about lookgoodr <a className="email" target="_blank" href="https://www.notion.so/About-lookgoodr-cef509c12d1f48a3ae37502180088575">here</a>, and follow our <a className="email" href="https://www.instagram.com/lookgoodr.style/" target="_blank"><i class="fab fa-instagram fa-lg"/></a> to stay updated on our journey!
           </div>
         </div>
         <hr className="bottom-line"/>

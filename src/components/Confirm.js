@@ -24,14 +24,19 @@ const Confirm = () => {
             <div className="wrapper-confirm">
                 <img className="splash-confirm" src={confirm}/>
                 <div className="tagline-confirm">Thank you!</div>
-                <div className="text-confirm">A confirmation has been sent to {email}.</div>
-                <div className="text-confirm">If you haven't received it, email us <a className="email-confirm" href="mailto:lookgoodr.style@gmail.com">here.</a></div>
+                <div className="text-confirm">You will receive a confirmation and invoice at {email}.</div>
+                {/* <div className="text-confirm">If you haven't received it, email us <a className="email-confirm" href="mailto:lookgoodr.style@gmail.com">here.</a></div> */}
+                <div className="start">
+                    <Link style={{ textDecoration: 'none' }} to="/stylists">
+                        <h2>Browse more stylists ➜</h2>
+                    </Link>
+                </div>
                 <div className="social-confirm">
                     Let's stay in touch!
                     <div className="social-confirm-icons">
-                        <a href="https://google.ca" target="blank"><i class="fab fa-instagram fa-lg"/></a>
-                        <a href="https://google.ca" target="blank"><i class="fab fa-facebook fa-lg"></i></a>
-                        <a href="https://google.ca" target="blank"><i class="fab fa-youtube fa-lg"/></a>
+                        <a href="https://www.instagram.com/lookgoodr.style/" target="_blank"><i class="fab fa-instagram fa-lg"/></a>
+                        {/* <a href="https://google.ca" target="_blank"><i class="fab fa-facebook fa-lg"></i></a> */}
+                        {/* <a href="https://google.ca" target="_blank"><i class="fab fa-youtube fa-lg"/></a> */}
                     </div>
                 </div>
                 <hr className="bottom-line"/>

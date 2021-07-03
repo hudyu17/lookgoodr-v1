@@ -28,10 +28,10 @@
 .social-confirm {
     display: flex;
     /* max-width: 60%; */
-    width: 240px;
+    width: 180px;
     margin: 60px auto;
-    justify-content: space-between;
-    font-size: 1.1em;
+    justify-content: space-evenly;
+    font-size: 1em;
 }
 
 .social-confirm-icons {
