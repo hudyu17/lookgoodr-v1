@@ -32,7 +32,7 @@ function Home() {
         <div className="howitworks-container">
           <div className="grid-block">
             <div class="number">1</div>
-            <h3>Browse our style experts</h3>
+            <h3>Browse our stylists</h3>
             <p>Explore moodboards and portfolio links to find the stylist that fits your look.</p>
           </div>
           <div className="grid-block">
@@ -92,7 +92,7 @@ function Home() {
           </div>
           <div className="faq-grid-block">
             <h3>Do you offer any other services?</h3>
-            <p>Not right now, but feel free to bring it up with your stylist and we'll see what we can do!</p>
+            <p>We're flexible! Shoot us an email <a className="email" href="mailto:lookgoodr.style@gmail.com">here</a>or bring it up with your stylist - we'll see what we can do.</p>
           </div>
           <div className="faq-grid-block">
             <h3>What if I'm not satisfied?</h3>
