@@ -92,7 +92,7 @@ function Home() {
           </div>
           <div className="faq-grid-block">
             <h3>Do you offer any other services?</h3>
-            <p>We're flexible! Shoot us an email <a className="email" href="mailto:lookgoodr.style@gmail.com">here</a>or bring it up with your stylist - we'll see what we can do.</p>
+            <p>We're flexible! Shoot us an email <a className="email" href="mailto:lookgoodr.style@gmail.com">here</a> or bring it up with your stylist - we'll see what we can do.</p>
           </div>
           <div className="faq-grid-block">
             <h3>What if I'm not satisfied?</h3>
