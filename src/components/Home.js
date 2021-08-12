@@ -114,7 +114,7 @@ function Home() {
           </div>
         </div>
         <div className="version">
-          v 1.0
+          v 1.1
         </div>
       </div>
     );
