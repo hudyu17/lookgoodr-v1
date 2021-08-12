@@ -162,7 +162,6 @@
 
 
 
-
 @media only screen and (max-width: 768px) {
     /* For mobile phones: */
     .splash {
@@ -188,10 +187,7 @@
     
   }
 
-  .version {
-    font-size: 0.4em;
-    text-align: center;
-  }
+ 
 
 
 

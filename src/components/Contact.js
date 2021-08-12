@@ -22,89 +22,81 @@ const Contact = () => {
   }
   const { stylist } = location.state
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // setLoader(true);
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // setLoader(true);
 
-    if ((name === "") || (email === "") || (type === "") || (type === "null") || (description === "")) {
-      alert("Please complete the entire form!");
-      return;
-    }
+  //   if ((name === "") || (email === "") || (type === "") || (type === "null") || (description === "")) {
+  //     alert("Please complete the entire form!");
+  //     return;
+  //   }
 
-    // Send 3 emails: 
-    // Email 1: Client confirmation
-    emailjs.sendForm('gmail', 'client-v1', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+  //   // Send 3 emails: 
+  //   // Email 1: Client confirmation
+  //   emailjs.sendForm('gmail', 'client-v1', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
+  //     .then((result) => {
+  //         console.log(result.text);
+  //     }, (error) => {
+  //         console.log(error.text);
+  //     });
 
-    // Email 2: notify stylists
-    if (stylist == "Chris") {
-      emailjs.sendForm('gmail', 'stylist-chris', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-    } else if (stylist == "Marley") {
-      emailjs.sendForm('gmail', 'stylist-marley', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-    } else if (stylist == "Shelby") {
-      emailjs.sendForm('gmail', 'stylist-shelby', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-    } else if (stylist == "Hayley") {
-      emailjs.sendForm('gmail', 'stylist-hayley', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-    }
+  //   // Email 2: notify stylists
+  //   if (stylist == "Chris") {
+  //     emailjs.sendForm('gmail', 'stylist-chris', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
+  //     .then((result) => {
+  //         console.log(result.text);
+  //     }, (error) => {
+  //         console.log(error.text);
+  //     });
+  //   } else if (stylist == "Marley") {
+  //     emailjs.sendForm('gmail', 'stylist-marley', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
+  //     .then((result) => {
+  //         console.log(result.text);
+  //     }, (error) => {
+  //         console.log(error.text);
+  //     });
+  //   } else if (stylist == "Shelby") {
+  //     emailjs.sendForm('gmail', 'stylist-shelby', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
+  //     .then((result) => {
+  //         console.log(result.text);
+  //     }, (error) => {
+  //         console.log(error.text);
+  //     });
+  //   } else if (stylist == "Hayley") {
+  //     emailjs.sendForm('gmail', 'stylist-hayley', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
+  //     .then((result) => {
+  //         console.log(result.text);
+  //     }, (error) => {
+  //         console.log(error.text);
+  //     });
+  //   }
 
-    // Email 3: notify hudson
-    emailjs.sendForm('gmail', 'notify-hudson', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
+  //   // Email 3: notify hudson
+  //   emailjs.sendForm('gmail', 'notify-hudson', e.target, 'user_QTkd3gkjZIGVN1BDdPHQA')
+  //     .then((result) => {
+  //         console.log(result.text);
+  //     }, (error) => {
+  //         console.log(error.text);
+  //     });
 
-    // Add to firebase DB
-    db.collection("requests")
-      .add({
-        name: name,
-        email: email,
-        type: type,
-        desc: description,
-        stylist: stylist
-      })
-      .then(() => {
-        // setLoader(false);
-      })
-      .catch((error) => {
-        alert(error.message);
-        // setLoader(false);
-      });
-  
+  //   // Add to firebase DB
+  //   db.collection("requests")
+  //     .add({
+  //       name: name,
+  //       email: email,
+  //       type: type,
+  //       desc: description,
+  //       stylist: stylist
+  //     })
+  //     .then(() => {
+  //     })
+  //     .catch((error) => {
+  //       alert(error.message);
+  //     });
 
-    // setName("");
-    // setEmail("");
-    // setDescription("");
-    // e.target.reset();
+  //   setSubmitted(true);
 
-    setSubmitted(true);
-
-  };
+  // };
 
   return (
     <div className="app">
@@ -120,7 +112,7 @@ const Contact = () => {
           </Link>
       </div>
       <div className="wrapper-contact">
-        <form className="form" onSubmit={handleSubmit}>
+        <form className="form">
         
           <h1>Request {stylist}!</h1>
 
@@ -168,7 +160,7 @@ const Contact = () => {
             type="submit"
             style={{ background: "#ea80fc" }}
           >
-            Submit request
+            Submit request (doesn't work anymore)
           </button>
         </form>
       </div>
